@@ -1,0 +1,5 @@
+pip install django
+pip install django-admin
+pip install postgres
+python manage.py migrate
+python manage.py createsuperuser

@@ -1,0 +1,302 @@
+{% extends "dashboard/index.html" %}
+
+{% block header %}
+  <h1>
+    Dashboard
+    <small>Control panel</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active">Dashboard</li>
+  </ol>
+{% endblock header %}
+
+{% block maincontent %}
+  <div class="row controller">
+           <div class="col-xl-6 col-md-6 col-6">
+               <div class="box box-primary">
+                  <div class="lending-controller">
+                      <div class="form-group">
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ref/username">
+                      <button type="button" class="btn btn-primary">Primary</button>
+                      <small id="emailHelp" class="form-text text-muted">Get bonus by referring new members <a href="#">learn more</a> </small>
+                    </div>
+                  </div>
+
+              <!-- /.box-body -->
+            </div>
+           </div>
+
+           <div class="col-xl-6 col-md-6 col-6">
+               <div class="box box-primary">
+                 <div class="right-box-btn">
+                     <div class="row">
+                     <div class="col-sm-12">
+                         <div class="button-right-group">
+                              <button type="button" class="btn btn-primary btn-lg enable">Lending</button>
+                              <button type="button" class="btn btn-primary btn-lg disabled " disabled="">Reinvest</button>
+                         </div>
+                     </div>
+                     <div class="col-sm-12">
+                          <div class="button-right-group">
+                             <button type="button" class="btn btn-primary btn-lg disabled"  disabled="">Convert USD</button>
+                              <button type="button" class="btn btn-primary btn-lg enable">Exchange</button>
+                         </div>
+                     </div>
+                 </div>
+                 </div>
+
+              <!-- /.box-body -->
+            </div>
+           </div>
+       </div>
+
+  <div class="row">
+    <div class="col-xl-3 col-md-6 col-6">
+      <!-- small box -->
+      <div class="small-box bg-aqua">
+        <div class="inner">
+          <h3>BTC</h3>
+
+          <p>0.00000000</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-btc"></i>
+        </div>
+        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-xl-3 col-md-6 col-6">
+      <!-- small box -->
+      <div class="small-box bg-green">
+        <div class="inner">
+          <h3>UCH<sup style="font-size: 20px"></sup></h3>
+
+          <p>0.00000000</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-magnet"></i>
+        </div>
+        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-xl-3 col-md-6 col-6">
+      <!-- small box -->
+      <div class="small-box bg-purple">
+        <div class="inner">
+          <h3>ETH</h3>
+
+          <p>0.0000000</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-user-plus"></i>
+        </div>
+        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-xl-3 col-md-6 col-6">
+      <!-- small box -->
+      <div class="small-box bg-red">
+        <div class="inner">
+          <h3>USD</h3>
+
+          <p>0.0000000</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-usd"></i>
+        </div>
+        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <!-- ./col -->
+  </div>
+
+  <!-- /.row -->
+  <div class="row price-earn">
+    <div class="col-lg-4 col-md-6">
+      <div class="box box-primary">
+        <div class="box-header">
+          <h3 class="box-title box-title-mid">Today Earn</h3>
+        </div>
+        <div class="box-body res-tb-block text-center">
+          <img src="../ucoincash/images/usd-ico-yellow.png" alt="alert" class="model_img img-fluid" id="sa-params">
+          <span>0 USD</span>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="box box-primary">
+        <div class="box-header">
+          <h3 class="box-title box-title-mid">Total Earn</h3>
+        </div>
+        <div class="box-body res-tb-block text-center">
+          <img src="../ucoincash/images/usd-ico-yellow.png" alt="alert" class="model_img img-fluid" id="sa-params">
+          <span>0 USD</span>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="box box-primary">
+        <div class="box-header">
+          <h3 class="box-title box-title-mid">Total Lending</h3>
+        </div>
+        <div class="box-body  res-tb-block text-center">
+          <img src="../ucoincash/images/usd-ico-yellow.png" alt="alert" class="model_img img-fluid" id="sa-params">
+          <span>0 USD</span>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+   </div>
+  <!-- /.row -->
+  <div class="row">
+
+     <div class="col-xl-4">
+      <!-- PRODUCT LIST -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Recently Products</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <ul class="products-list product-list-in-box">
+                <li class="item">
+                  <div class="product-img">
+                    <img src="images/default-50x50.gif" alt="Product Image">
+                  </div>
+                  <div class="product-info">
+                    <a href="javascript:void(0)" class="product-title">iphone 7plus
+                      <span class="label label-warning pull-right">$300</span></a>
+                    <span class="product-description">
+                          12MP Wide-angle and telephoto cameras.
+                        </span>
+                  </div>
+                </li>
+                <!-- /.item -->
+                <li class="item">
+                  <div class="product-img">
+                    <img src="images/default-50x50.gif" alt="Product Image">
+                  </div>
+                  <div class="product-info">
+                    <a href="javascript:void(0)" class="product-title">Apple Tv
+                      <span class="label label-info pull-right">$400</span></a>
+                    <span class="product-description">
+                          Library | For You | Browse | Radio
+                        </span>
+                  </div>
+                </li>
+                <!-- /.item -->
+                <li class="item">
+                  <div class="product-img">
+                    <img src="images/default-50x50.gif" alt="Product Image">
+                  </div>
+                  <div class="product-info">
+                    <a href="javascript:void(0)" class="product-title">MacBook Air<span
+                        class="label label-danger pull-right">$450</span></a>
+                    <span class="product-description">
+                          Make big things happen. All day long.
+                        </span>
+                  </div>
+                </li>
+                <!-- /.item -->
+                <li class="item">
+                  <div class="product-img">
+                    <img src="images/default-50x50.gif" alt="Product Image">
+                  </div>
+                  <div class="product-info">
+                    <a href="javascript:void(0)" class="product-title">iPad Pro
+                      <span class="label label-success pull-right">$289</span></a>
+                    <span class="product-description">
+                          Anything you can do, you can do better.
+                        </span>
+                  </div>
+                </li>
+                <!-- /.item -->
+              </ul>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer text-center">
+              <a href="javascript:void(0)" class="uppercase">View All Products</a>
+            </div>
+            <!-- /.box-footer -->
+          </div>
+     </div>
+    <div class="col-xl-8 connectedSortable">
+      <!-- bar CHART -->
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">User Statistics</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+          <div class="chart">
+            <canvas id="barChart" style="height:215px"></canvas>
+          </div>
+        </div>
+        <!-- /.box-body -->
+
+        <div class="box-footer">
+          <div class="row">
+            <div class="col-6 col-sm-3">
+              <div class="description-block border-right">
+                <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 20%</span>
+                <h5 class="description-header">$12,000</h5>
+                <span class="description-text">DAILY SALES</span>
+              </div>
+              <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-6 col-sm-3">
+              <div class="description-block border-right">
+                <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 30%</span>
+                <h5 class="description-header">$5,000</h5>
+                <span class="description-text">WEEKLY SALES</span>
+              </div>
+              <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-6 col-sm-3">
+              <div class="description-block border-right">
+                <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 60%</span>
+                <h5 class="description-header">$10,000</h5>
+                <span class="description-text">MONTHLY SALES</span>
+              </div>
+              <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-6 col-sm-3">
+              <div class="description-block">
+                <span class="description-percentage text-blue"><i class="fa fa-caret-up"></i> 40%</span>
+                <h5 class="description-header">$50,000</h5>
+                <span class="description-text">YEARLY SALES</span>
+              </div>
+              <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.box-footer -->
+      </div>
+      <!-- /.box -->
+    </div>
+  </div>
+  <!-- /.row -->
+{% endblock maincontent %}
