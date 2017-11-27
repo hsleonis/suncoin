@@ -99,7 +99,7 @@
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="/accounts/profile"><i class="ion ion-person"></i> My Profile</a>
+                    <a href="{% url 'dashboard:profile' %}"><i class="ion ion-person"></i> My Profile</a>
                   </div>
                   <div class="col-12 text-left">
                     <a href="#"><i class="ion ion-settings"></i> Setting</a>
@@ -110,7 +110,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="#" class="btn btn-block btn-danger"><i class="ion ion-power"></i> Log Out</a>
+                  <a href="{% url 'dashboard:logout' %}" class="btn btn-block btn-danger"><i class="ion ion-power"></i> Log Out</a>
                 </div>
               </li>
             </ul>

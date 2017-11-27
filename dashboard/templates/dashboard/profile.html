@@ -16,8 +16,8 @@
                <div class="box box-primary">
                   <div class="lending-controller">
                       <div class="form-group">
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ref/username">
-                      <button type="button" class="btn btn-primary">Primary</button>
+                      <input type="text" contenteditable="false" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ base_url }}/signup?ref={{ username }}">
+                      <button onclick="$('#exampleInputEmail1').select();document.execCommand('copy');" type="button" class="btn btn-primary">Copy</button>
                       <small id="emailHelp" class="form-text text-muted">Get bonus by referring new members <a href="#">learn more</a> </small>
                     </div>
                   </div>

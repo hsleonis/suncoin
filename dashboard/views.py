@@ -2,10 +2,6 @@ from django.shortcuts import render
 from postgres import Postgres
 from pprint import pprint
 
-def database():
-    db = Postgres("postgres://sun_admin@localhost/dsb_suncoin")
-    return db
-
 
 # Create your views here.
 def dashboard(request):
@@ -15,12 +11,9 @@ def dashboard(request):
 def profile(request):
     current_user = request.user
 
-    #db = database()
-    #user = db.one("SELECT * FROM auth_users WHERE username='"+ current_user +"'")
-    #pprint(user)
-
     response_model = {
-        'username': current_user
+        'username': current_user,
+        'base_url': 'http://127.0.0.1:8000'
     }
 
     return render(request, 'dashboard/profile.html', response_model)
