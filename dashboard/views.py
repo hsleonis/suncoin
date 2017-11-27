@@ -2,14 +2,14 @@ from django.shortcuts import render
 from postgres import Postgres
 from pprint import pprint
 
-
-# Create your views here.
+# Dashboard
 def index(request):
     return render(request, 'dashboard/dashboard.html')
 
 # User profile
 def profile(request):
     current_user = request.user
+    pprint(current_user)
 
     response_model = {
         'username': current_user,
