@@ -4,7 +4,7 @@ from pprint import pprint
 
 
 # Create your views here.
-def dashboard(request):
+def index(request):
     return render(request, 'dashboard/dashboard.html')
 
 # User profile

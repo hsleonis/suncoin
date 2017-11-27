@@ -58,14 +58,12 @@
 
   </head>
 
-
-
 <body class="hold-transition sidebar-mini skin-purple-light">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="/dashboard" class="logo">
+    <a href="{% url 'dashboard:index' %}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><img src="{% static 'dashboard/img/suncoin.png' %}" alt=""></span>
       <!-- logo for regular state and mobile devices -->
@@ -132,7 +130,7 @@
       <ul class="sidebar-menu" data-widget="tree">
 
         <li class="active">
-          <a href="index.html">
+          <a href="{% url 'dashboard:index' %}">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
             </span>
@@ -147,8 +145,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/widgets/widgets.html">ICO information</a></li>
-            <li><a href="pages/widgets/weather.html">Buy UCH Token</a></li>
+            <li><a href="#">ICO information</a></li>
+            <li><a href="#">Buy UCH Token</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -160,8 +158,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html">Deposits & Withdrawals</a></li>
-            <li><a href="pages/charts/morris.html">History</a></li>
+            <li><a href="#">Deposits & Withdrawals</a></li>
+            <li><a href="#">History</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -172,8 +170,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/examples/login.html">Login</a></li>
-            <li><a href="pages/examples/signup.html">Signup</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -199,8 +197,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html">My Profile</a></li>
-            <li><a href="pages/tables/data.html">Security</a></li>
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">Security</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -258,7 +256,7 @@
   <footer class="main-footer">
     <div class="pull-right d-none d-sm-inline-block">
       <b>Version</b> 1.1
-    </div>Copyright &copy; 2017 <a href="https://www.multipurposethemes.com/">Multi-Purpose Themes</a>. All Rights Reserved.
+    </div>Copyright &copy; 2017 <a href="{% url 'dashboard:index' %}">DSB</a>. All Rights Reserved.
   </footer>
 
   <!-- Control Sidebar -->
