@@ -9,7 +9,6 @@ def index(request):
 # User profile
 def profile(request):
     current_user = request.user
-    pprint(current_user)
 
     response_model = {
         'username': current_user,

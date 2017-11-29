@@ -19,10 +19,16 @@ def login(request):
 # User Signup
 def signup(request):
 
+    response_model = {
+        'success': True,
+        'msg': '',
+        'sponsor': ''
+    }
+
     # Get sponsor
     if request.method == 'GET':
         if request.GET.get('ref') and request.GET['ref']:
-            sponsor = request.GET['ref']
+            response_model['sponsor'] = request.GET['ref']
 
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -41,14 +47,17 @@ def signup(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            print(message)
 
             send_mail(subject, message, 'noreply@suncoin.co', [user.email])
-            return redirect('/login')
+
+            response_model['msg'] = 'Please check your email to activate account'
     else:
         form = SignUpForm()
 
-    return render(request, 'suncoin/signup.html', {'form': form})
+    # pass signup form
+    response_model['form'] = form
+
+    return render(request, 'suncoin/signup.html', response_model)
 
 # Activate User
 def activate(request, uidb64, token):

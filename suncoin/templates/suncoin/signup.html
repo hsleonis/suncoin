@@ -8,18 +8,13 @@
 
   <div class="register-box-body">
     <p class="login-box-msg">Register a new membership</p>
-<!--<div class="form-group has-feedback">-->
-        <!--<input name="email" type="email" class="form-control" placeholder="Email" required>-->
-        <!--<span class="ion ion-email form-control-feedback"></span>-->
-      <!--</div>-->
-      <!--<div class="form-group has-feedback">-->
-        <!--<input name="password" type="password" class="form-control" placeholder="Password" required>-->
-        <!--<span class="ion ion-locked form-control-feedback"></span>-->
-      <!--</div>-->
-      <!--<div class="form-group has-feedback">-->
-        <!--<input name="password2" type="password" class="form-control" placeholder="Retype password" required>-->
-        <!--<span class="ion ion-log-in form-control-feedback"></span>-->
-      <!--</div>-->
+
+    {% if msg %}
+    <div class="alert alert-success">
+      <p>{{msg}}</p>
+    </div>
+    {% endif %}
+
     <form action="{% url 'signup' %}" method="post" class="form-element">
 	{% csrf_token %}
 
@@ -33,6 +28,8 @@
         {% for error in field.errors %}
           <p style="color: red">{{ error }}</p>
         {% endfor %}
+
+        <input type="hidden" name="sponsor" value="{{ sponsor }}" />
       </div>
       {% endfor %}
 
