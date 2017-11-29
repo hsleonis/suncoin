@@ -1,0 +1,6 @@
+.idea/*
+db.sqlite3
+dashboard/__pycache__/*
+suncoin/__pycache__/*
+dashboard/migrations/*
+suncoin/migrations/*

@@ -40,6 +40,8 @@
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 <body class="hold-transition login-page">
     {% block maincontent %}
@@ -48,13 +50,15 @@
 
 
 	<!-- jQuery 3 -->
-	<script src="{% static 'suncoin/js/jquery.min.js' %}"></script>
+	<script src="{% static 'suncoin/js/jquery.js' %}"></script>
 	
 	<!-- popper -->
-	<script src="{% static 'suncoin/js/popper.min.js' %}"></script>
+	<script src="{% static 'suncoin/js/popper.js' %}"></script>
 	
 	<!-- Bootstrap 4.0-->
-	<script src="{% static 'suncoin/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'suncoin/js/bootstrap.js' %}"></script>
 
+    <!-- Main JS -->
+    <script src="{% static 'suncoin/js/main.js' %}"></script>
 </body>
 </html>

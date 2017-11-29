@@ -15,7 +15,7 @@
     </div>
     {% endif %}
 
-    <form action="{% url 'signup' %}" method="post" class="form-element">
+    <form action="{% url 'signup' %}" method="post" class="form-element captcha-form">
 	{% csrf_token %}
 
       {% for field in form %}
@@ -32,6 +32,8 @@
         <input type="hidden" name="sponsor" value="{{ sponsor }}" />
       </div>
       {% endfor %}
+
+      <div class="g-recaptcha" data-sitekey="6Lel4joUAAAAANXEZbdBALuYKU58pxrm1jennXFY"></div>
 
       <div class="row">
         <div class="col-12">

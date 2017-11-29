@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from postgres import Postgres
+from django.contrib.auth.models import User
+from dashboard.models import Profile
 from pprint import pprint
 
 # Dashboard
@@ -9,9 +10,10 @@ def index(request):
 # User profile
 def profile(request):
     current_user = request.user
+    user_profile = User.objects.get(username=current_user)
 
     response_model = {
-        'username': current_user,
+        'user': user_profile,
         'base_url': 'http://127.0.0.1:8000'
     }
 
