@@ -19,13 +19,21 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '=&phu3bbo#h)08ozz!wi@mtp^=pm2yxu+oj4w@yg+1o+_!c(=&'
+if not DEBUG:
+    with open('/etc/suncoin/secret_key.txt') as f:
+        SECRET_KEY = f.read().strip()
+        print(SECRET_KEY)
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'thesuncoin.com'
+]
 
 
 # Application definition
@@ -126,14 +134,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 # Login redirect
 LOGIN_REDIRECT_URL = '/dashboard'
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'shahriar.ds'
-EMAIL_HOST_PASSWORD = 'Dsb12345'
-EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_HOST = 'mail.thesuncoin.com'
+EMAIL_HOST_PASSWORD = 'q123456Z'
+EMAIL_HOST_USER = 'support@thesuncoin.com'
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

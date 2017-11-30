@@ -81,6 +81,8 @@ Body :		Poppins, sans-serif;
 body {
     font-weight: 400;
 	font-size: 14px;
+	background: url(../img/login-bg.jpg) center center no-repeat #d2d6de;
+    background-size: cover;
 }
 h4, .h4, h5, .h5, h6, .h6 {
     margin-bottom: 10px;
@@ -6310,9 +6312,6 @@ table.dataTable thead .sorting:after {
     color: #fff;
 }
 .login-page, .register-page {
-/*    background: url(../images/login-register.jpg) center center no-repeat #d2d6de;*/
-    background: #37b5a3;
-    background-size: cover;
     height: 100%;
     width: 100%;
 }

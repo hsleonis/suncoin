@@ -1,0 +1,70 @@
+{% extends "dashboard/index.html" %}
+{% load static %}
+
+{% block header %}
+  <h1>
+    User Profile
+  </h1>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+    <li class="breadcrumb-item active">Profile</li>
+  </ol>
+{% endblock header %}
+
+{% block maincontent %}
+  <div class="row controller">
+           <div class="col-xl-6 col-md-6 col-6">
+                   <div class="box box-primary">
+                        <div class="box-body box-profile">
+                            <img class="profile-user-img rounded-circle img-fluid mx-auto d-block" src="{% static 'dashboard/img/user2-160x160.jpg' %}" alt="User profile picture">
+
+                            <h3 class="profile-username text-center">{{ user.username }}</h3>
+
+                            <p class="text-muted text-center"></p>
+
+                            <div class="row social-states">
+                                <div class="col-6 text-right"><a href="#" class="link"><i class="fa fa-upload" aria-hidden="true"></i> Upload</a></div>
+                                <div class="col-6 text-left"><a href="{% url 'dashboard:profile_edit' %}" class="link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a></div>
+                            </div>
+                        </div>
+                <!-- /.box-body -->
+              </div>
+
+               <div class="box box-primary">
+                  <div class="lending-controller">
+                      <div class="form-group">
+                      <input type="text" contenteditable="false" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ base_url }}/signup?ref={{ user.username }}">
+                      <button onclick="$('#exampleInputEmail1').select();document.execCommand('copy');" type="button" class="btn btn-primary">Copy</button>
+                      <small id="emailHelp" class="form-text text-muted">Get bonus by referring new members <a href="#">learn more</a> </small>
+                    </div>
+                  </div>
+
+                <!-- /.box-body -->
+                </div>
+           </div>
+
+           <div class="col-xl-6 col-md-6 col-6">
+              <div class="box box-primary">
+                  <div class="box-body box-profile">
+                      <div class="profile-user-info">
+
+                          <p>Username </p>
+                          <h6 class="margin-bottom">{{ user.username }}</h6>
+
+                          <p>Name </p>
+                          <h6 class="margin-bottom">{{ user.profile.fullname }}</h6>
+
+                          <p>Email address </p>
+                          <h6 class="margin-bottom">{{ user.email }}</h6>
+
+                          <p>Address</p>
+                          <h6 class="margin-bottom">{{ user.profile.location }}</h6>
+
+                          <p>Date Joined</p>
+                          <h6 class="margin-bottom">{{ user.date_joined }}</h6>
+                      </div>
+                  </div>
+              </div>
+           </div>
+       </div>
+{% endblock maincontent %}

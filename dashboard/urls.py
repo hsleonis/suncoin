@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^dashboard/$', views.index, name='dashboard'),
     url(r'^profile/$', views.profile, name='profile'),
+    url(r'^profile/edit$', views.profile_edit, name='profile_edit'),
     url(r'^logout/$', auth_views.logout, {'next_page': '/login'}, name='logout'),
 ]

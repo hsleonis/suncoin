@@ -1,0 +1,108 @@
+{% extends "dashboard/index.html" %}
+
+{% block header %}
+  <h1>
+    User Profile Update
+  </h1>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+    <li class="breadcrumb-item active">Profile Edit</li>
+  </ol>
+{% endblock header %}
+
+{% block maincontent %}
+<form action="{% url 'dashboard:profile_edit' %}" enctype="multipart/form-data" method="POST">
+     <div class="row">
+         <div class="col-xl-6 col-lg-6">
+             <div class="box box-body">
+
+                {% if msg %}
+                <div class="alert alert-success">
+                  <p>{{msg}}</p>
+                </div>
+                {% endif %}
+
+                 {% csrf_token %}
+                 <div class="user-form">
+                     <div class="form-group">
+                        <label for="current_password">Current Password :</label>
+                        <input type="password" class="form-control" id="current_password" name="current_password" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="new_password1">New Password :</label>
+                        <input type="password" class="form-control" id="new_password1" name="new_password1" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="new_password2">Confirm Password :</label>
+                        <input type="password" class="form-control" id="new_password2" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="fullname">Full Name :</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="birth_date">Date of Birth :</label>
+                        <input type="date" class="form-control" id="birth_date" name="birth_date">
+                     </div>
+
+                     <div class="user_btn">
+                        <input type="submit" class="btn btn-default" value="Submit" name="submit">
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col-xl-6 col-lg-6">
+             <div class="box box-body">
+                 <div class="user-form">
+                    <div class="form-group">
+                        <label for="continent">Continent* :</label>
+                        <select class="custom-select form-control" id="continent" name="continent">
+                            <option value="Africa">Africa</option>
+                            <option value="Antarctica">Antarctica</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="North America">North America</option>
+                            <option value="Oceania">Oceania</option>
+                            <option value="South America">South America</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country :</label>
+                        <select class="custom-select form-control" id="country" name="country" required>
+                            {% for item in countries %}
+                            <option value="{{item.name}}">{{item.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="address">Address :</label>
+                        <input type="text" class="form-control" id="address" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender :</label>
+                        <select class="custom-select form-control" id="gender">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="timezone">Time Zone :</label>
+                        <select id="timezone" class="form-control bfh-timezones">
+                            {% for item in timezones %}
+                            <option value="{{item.value}}">{{item.text}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                     <div class="form-group">
+                         <div class="g-recaptcha" data-sitekey="6Lel4joUAAAAANXEZbdBALuYKU58pxrm1jennXFY"></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     </form>
+{% endblock maincontent %}

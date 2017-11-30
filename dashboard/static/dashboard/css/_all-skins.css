@@ -1469,7 +1469,8 @@ Primary use:	Apro Admin - Responsive Admin Template
 /*---Skin: Purple light---*/
 /*---light sidebar---*/
 .skin-purple-light .main-header .navbar {
-  background-color: #926dde;
+  background-color: #e5e5e5;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
 }
 .skin-purple-light .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -1493,10 +1494,11 @@ Primary use:	Apro Admin - Responsive Admin Template
   background: rgba(0, 0, 0, 0.1);
 }
 .skin-purple-light .main-header .navbar .sidebar-toggle {
-  color: #fff;
+  color: #f08700;
 }
 .skin-purple-light .main-header .navbar .sidebar-toggle:hover {
   background-color: transparent;
+    color: #d87f0c;
 }
 @media (max-width: 767px) {
   .skin-purple-light .main-header .navbar .dropdown-menu li.divider {
@@ -1510,12 +1512,12 @@ Primary use:	Apro Admin - Responsive Admin Template
   }
 }
 .skin-purple-light .main-header .logo {
-  background-color: #926dde;
-  color: #ffffff;
+  background-color: #e5e5e5;
+  color: #666666;
   border-bottom: 0 solid transparent;
 }
 .skin-purple-light .main-header .logo:hover {
-  background-color: #805dc8;
+  background-color: #f3f3f3;
 }
 .skin-purple-light .main-header li.user-header {
   background-color: #fff;
@@ -1545,15 +1547,15 @@ Primary use:	Apro Admin - Responsive Admin Template
   border-left:none;
 }
 .skin-purple-light .sidebar-menu > li:hover > a{
-  color: #926dde;
+  color: #f08700;
   background: rgba(0,0,0,0.1);
 }
 .skin-purple-light .sidebar-menu > li.active > a,
 .skin-purple-light .sidebar-menu > li.menu-open > a {
-  color: #926dde;
+  color: #f08700;
 }
 .skin-purple-light .sidebar-menu > li.active > a {
-  border-left-color: #926dde;
+  border-left-color: #f08700;
 }
 .skin-purple-light .sidebar-menu > li > .treeview-menu {
   margin: 0 0px;
