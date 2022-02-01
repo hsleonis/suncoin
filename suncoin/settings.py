@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'suncoin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dsb_suncoin',
+        'NAME': 'dsb_scoin',
         'USER': 'sun_admin',
-        'PASSWORD': 'ec457d0a974c48d5685a7efa03d137dc8bbde7e3',
+        'PASSWORD': '12345',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -142,7 +142,7 @@ LOGIN_REDIRECT_URL = '/dashboard'
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'mail.thesuncoin.com'
+EMAIL_HOST = 'mail.suncoin.com'
 EMAIL_HOST_PASSWORD = '12345'
 EMAIL_HOST_USER = 'aa@aa.com'
 EMAIL_PORT = 587
