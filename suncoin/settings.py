@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = False
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=&phu3bbo#h)08ozz!wi@mtp^=pm2yxu+oj4w@yg+1o+_!c(=&'
+SECRET_KEY = '=&=&'
 if not DEBUG:
     with open('/etc/suncoin/secret_key.txt') as f:
         SECRET_KEY = f.read().strip()
@@ -143,7 +143,7 @@ LOGIN_REDIRECT_URL = '/dashboard'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'mail.thesuncoin.com'
-EMAIL_HOST_PASSWORD = 'q123456Z'
-EMAIL_HOST_USER = 'support@thesuncoin.com'
+EMAIL_HOST_PASSWORD = '12345'
+EMAIL_HOST_USER = 'aa@aa.com'
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
