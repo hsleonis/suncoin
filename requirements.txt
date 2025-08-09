@@ -3,7 +3,7 @@ chardet==3.0.4
 Django==4.2.22
 django-six==1.0.4
 gunicorn==19.7.1
-idna==2.6
+idna==3.7
 postgres==2.2.1
 psycopg2==2.7.3.2
 pytz==2017.3
